@@ -14,6 +14,7 @@
 
 
 
+    
 ## Project set up
 - clone the project on your local
 - execute `npm install` on the same path as of your root directory of the download project
@@ -34,3 +35,4 @@
 }
 ...
 - once you've added your db config as listed above, go to the src folder from your terminal and execute `npx sequelize db:create`
+...
