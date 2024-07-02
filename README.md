@@ -47,3 +47,8 @@ And then execute `npx sequelize db:migrate`
   - A flight belongs to an airplane but one airplane can be used in multiple flights
   - A city has many airports but one airport belongs to a city
   - one airport can have many flights, but a flight belongs to one airport
+
+  ##Tables
+  ### City → id, name, created_at, updated_at
+  ### Airport → id, name, address, city_id, created_at, updated_at
+      Relationship → City  has many airports and airport belongs to a city(One to many )
