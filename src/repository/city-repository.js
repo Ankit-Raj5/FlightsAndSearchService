@@ -17,7 +17,7 @@ class CityRepository{
             await City.destroy({
                 where:{
                     id : cityId
-                }
+                } 
             })
             return true;
         } catch (error) {
