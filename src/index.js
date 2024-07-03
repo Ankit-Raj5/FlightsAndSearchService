@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const Sequelize= require('sequelize')
 const { PORT } = require('./config/serverConfig');
 const ApiRoutes = require('./routes/index');
 
@@ -21,10 +21,10 @@ const setupAndStartServer = async ()=>{
     app.listen(PORT,async ()=>{
         console.log(`server started at ${PORT}`);
         // console.log(process.env);
-
-        if(process.env.SYNC_DB){
-            db.sequelize.sync({alter:true});//don't replace `alter` by `force` ,it can delete all data of that class
-        }
+        //console.log(Sequelize.DataTypes.NOW);
+        // if(process.env.SYNC_DB){
+        //     db.sequelize.sync({alter:true});//don't replace `alter` by `force` ,it can delete all data of that class
+        // }
 
 
         // creating new airplane
